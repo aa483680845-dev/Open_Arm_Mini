@@ -1,0 +1,101 @@
+<mujoco model="robot_1">
+
+  <include file="scene.xml"/>
+  <compiler angle="radian" meshdir="../../meshes/"/>
+
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="link_1" file="link_1.STL"/>
+    <mesh name="link_2" file="link_2.STL"/>
+    <mesh name="link_3" file="link_3.STL"/>
+    <mesh name="link_4" file="link_4.STL"/>
+    <mesh name="link_5" file="link_5.STL"/>
+    <mesh name="link_6" file="link_6.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.647059 0.619608 0.588235 1" mesh="base_link"/>
+    <geom type="mesh" rgba="0.647059 0.619608 0.588235 1" mesh="base_link"/>
+    <body name="link_1" pos="0.00019927 -0.001877 0.10675">
+      <inertial pos="-0.0001798 -0.0062513 -0.0147465" quat="0.995519 0.0944818 0.00032831 0.003958" mass="0.68958" diaginertia="0.000522302 0.000501989 0.000355309"/>
+      <joint name="joint_1" pos="0 0 0" axis="0 0 1" range="-3 3" actuatorfrcrange="-27 27"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_1"/>
+      <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_1"/>
+      <body name="link_2" quat="0.707105 -0.707108 0 0">
+        <inertial pos="-0.130904 0 0.0144901" quat="0 0.661662 0 0.749802" mass="0.637029" diaginertia="0.00350037 0.0034922 0.000259135"/>
+        <joint name="joint_2" pos="0 0 0" axis="0 0 1" range="-3 3" actuatorfrcrange="-27 27"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_2"/>
+        <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_2"/>
+        <body name="link_3" pos="-0.18 0 0" quat="-3.67321e-06 -1 0 0">
+          <inertial pos="-0.0058307 0.0495532 0.0062562" quat="0.734745 0.543882 -0.1794 0.363536" mass="0.702419" diaginertia="0.000915743 0.00089766 0.000333097"/>
+          <joint name="joint_3" pos="0 0 0" axis="0 0 1" range="-3 3" actuatorfrcrange="-27 27"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_3"/>
+          <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_3"/>
+          <body name="link_4" pos="-0.00071398 0.071768 -0.00087296" quat="0.499998 0.5 0.500002 0.5">
+            <inertial pos="0.0002323 0.0070423 0.160009" quat="0.999869 0.0161554 0 0" mass="0.52115" diaginertia="0.002666 0.00265165 0.00020815"/>
+            <joint name="joint_4" pos="0 0 0" axis="0 0 1" range="-3 3" actuatorfrcrange="-7 7"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_4"/>
+            <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_4"/>
+            <body name="link_5" pos="0.00023228 -0.0022353 0.20325" quat="0.707105 -0.707108 0 0">
+              <inertial pos="-2.94e-05 -0.0433495 -0.0048578" quat="0.59968 0.377138 -0.37585 0.597401" mass="0.473414" diaginertia="0.000466568 0.0004422 0.000194732"/>
+              <joint name="joint_5" pos="0 0 0" axis="0 0 -1" range="-3 3" actuatorfrcrange="-7 7"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_5"/>
+              <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_5"/>
+              <body name="link_6" pos="-0.00023228 -0.061253 0.0014853" quat="0.707105 0.707108 0 0">
+                <inertial pos="0.000232282 -6.28905e-11 0.0174195" quat="0.5 0.5 -0.5 0.5" mass="0.010251" diaginertia="1.58125e-06 8.93402e-07 8.93402e-07"/>
+                <joint name="joint_6" pos="0 0 0" axis="0 0 1" range="-3 3" actuatorfrcrange="-7 7"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.827451 0.827451 0.819608 1" mesh="link_6"/>
+                <geom type="mesh" rgba="0.827451 0.827451 0.819608 1" mesh="link_6"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+
+    <default>
+     <joint frictionloss="0.2"  damping="0.02"/>
+     
+  </default>
+  
+  <actuator>
+
+    <motor name= "trq_ctrl_1" joint="joint_1" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name= "trq_ctrl_2" joint="joint_2" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name= "trq_ctrl_3" joint="joint_3" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name= "trq_ctrl_4" joint="joint_4" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name= "trq_ctrl_5" joint="joint_5" ctrllimited="true" ctrlrange="-7 7"/>
+    <motor name= "trq_ctrl_6" joint="joint_6" ctrllimited="true" ctrlrange="-7 7"/>
+
+    <!-- <position name= "pos_ctrl_1" joint="joint_1" ctrllimited="true" ctrlrange="-3.14 3.14" kp="80" kv="10"/>
+    <position name= "pos_ctrl_2" joint="joint_2" ctrllimited="true" ctrlrange="-1 3.14" kp="90" kv="15"/>
+    <position name= "pos_ctrl_3" joint="joint_3" ctrllimited="true" ctrlrange="-3.14 3.14" kp="120" kv="20"/>
+    <position name= "pos_ctrl_4" joint="joint_4" ctrllimited="true" ctrlrange="-3.14 3.14" kp="20" kv="1"/>
+    <position name= "pos_ctrl_5" joint="joint_5" ctrllimited="true" ctrlrange="-3.14 3.14" kp="20" kv="1"/>
+    <position name= "pos_ctrl_6" joint="joint_6" ctrllimited="true" ctrlrange="-3.14 3.14" kp="20" kv="1"/> -->
+
+  </actuator>
+  
+  <sensor>
+    <jointpos name="joint_pos_1" joint="joint_1"/>
+    <jointpos name="joint_pos_2" joint="joint_2"/>
+    <jointpos name="joint_pos_3" joint="joint_3"/>
+    <jointpos name="joint_pos_4" joint="joint_4"/>
+    <jointpos name="joint_pos_5" joint="joint_5"/>
+    <jointpos name="joint_pos_6" joint="joint_6"/>
+
+    <jointvel name="joint_vel_1" joint="joint_1"/>
+    <jointvel name="joint_vel_2" joint="joint_2"/>
+    <jointvel name="joint_vel_3" joint="joint_3"/>
+    <jointvel name="joint_vel_4" joint="joint_4"/>
+    <jointvel name="joint_vel_5" joint="joint_5"/>
+    <jointvel name="joint_vel_6" joint="joint_6"/>
+  </sensor>
+
+  <keyframe>
+    <key name= "home" qpos="0 0 0 0 0 0"/>
+    <key name= "pose_1" qpos="0 0.814 -0.922 0 0.565 -1"/>
+  </keyframe>
+</mujoco>

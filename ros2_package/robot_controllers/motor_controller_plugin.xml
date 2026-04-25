@@ -1,0 +1,11 @@
+<library path="motor_controller">
+    <class name="robot_controller/MotorController"
+           type="robot_controller::MotorController"
+           base_class_type="controller_interface::ControllerInterface">
+        <description>
+            a motor controller that position,velocity,effect
+        </description>
+    </class>
+           
+
+</library>

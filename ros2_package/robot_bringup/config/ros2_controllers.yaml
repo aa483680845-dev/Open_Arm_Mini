@@ -1,0 +1,64 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 250  # Hz
+
+    arm_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    arm_forward_command_controller:
+      type: forward_command_controller/ForwardCommandController
+    
+    arm_MIT_command_controller:
+      type: robot_controller/MotorController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_group_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6 
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: true
+
+arm_forward_command_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6 
+    interface_name: position
+
+arm_MIT_command_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+    # 控制模式: position_ff（位置+速度微分前馈）| gravity_comp（重力补偿+MIT阻尼）
+    control_mode: "gravity_comp"
+    
+    # gravity_comp 模式必填，
+    # position_ff 模式忽略
+    urdf_path: "/home/huanglili/Project/ros2_Ragtime/src/robot_description/urdf/robot_1.urdf"  
+
+
+
+
+
