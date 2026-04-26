@@ -9,12 +9,15 @@
 ## 演示
 
 **手柄控制**
+<video width="320" height="240" controls>
+    <source src="image/Handle_control.mp4" type="video/mp4">
+</video>
 
-https://github.com/user-attachments/assets/Handle_control.mp4
 
 **重力补偿**
-
-https://github.com/user-attachments/assets/Gravity_compensation.mp4
+<video width="320" height="240" controls>
+    <source src="image/Gravity_compensation.mp4" type="video/mp4">
+</video>
 
 ## 目录结构
 
