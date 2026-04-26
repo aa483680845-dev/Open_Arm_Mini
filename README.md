@@ -37,6 +37,6 @@ Open_Arm_Mini/
 
 ## 软件包文档
 
-ROS2 软件包的详细说明（环境配置、编译运行、架构设计、各包接口）请参阅：
+ROS2 软件包的详细说明（环境配置、编译运行、架构设计、各包接口）请参阅
 
 👉 [ros2_package/README.md](ros2_package/README.md)
