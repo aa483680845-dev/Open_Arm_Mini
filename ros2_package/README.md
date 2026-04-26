@@ -2,8 +2,6 @@
 
 本项目是基于 ROS2 的**六自由度机械臂控制系统**，通过 FDCAN 总线驱动达秒（Damiao）系列电机，采用 MIT 阻抗控制模式，支持真实硬件控制、Mujoco 仿真，控制方面可以采用手柄控制末端关节，拥有重力补偿功能。
 
-视频演示：[手柄控制](https://www.bilibili.com/video/BV12bXzBnELz/?spm_id_from=333.1387.homepage.video_card.click&vd_source=06ddd9c4e5f9252a80487469164151bf)
-[重力补偿](https://www.bilibili.com/video/BV14bXzBHEzj/?spm_id_from=333.1387.homepage.video_card.click&vd_source=06ddd9c4e5f9252a80487469164151bf)
 
 ## 环境配置
 
