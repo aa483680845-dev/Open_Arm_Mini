@@ -68,7 +68,7 @@ ros2 launch robot_bringup my_robot_pin.launch.py
                                达秒电机（MIT 阻抗：kp·Δq + kd·Δdq + τ_ff）
 ```
 
-### 各软件包简要说明（多数软件包内部都写了README文档）
+### 各软件包简要说明（多数软件包内部都写了README.md文档）
 
 | 软件包 | 功能 |
 |--------|------|
