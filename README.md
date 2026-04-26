@@ -10,12 +10,11 @@
 
 **手柄控制**
 
-https://github.com/user-attachments/assets/db7edda5-f6ce-4943-8614-c0d8e2e98409
+https://github.com/user-attachments/assets/3d2e06fe-9ed9-414d-ab63-fa3fa3a4508c
 
 **重力补偿**
-<video width="320" height="240" controls>
-    <source src="image/Gravity_compensation.mp4" type="video/mp4">
-</video>
+
+https://github.com/user-attachments/assets/b24e1ee6-b301-45b6-a565-f904d05fffcf
 
 ## 目录结构
 
