@@ -9,10 +9,8 @@
 ## 演示
 
 **手柄控制**
-<video width="320" height="240" controls>
-    <source src="image/Handle_control.mp4" type="video/mp4">
-</video>
 
+https://github.com/user-attachments/assets/db7edda5-f6ce-4943-8614-c0d8e2e98409
 
 **重力补偿**
 <video width="320" height="240" controls>
