@@ -119,4 +119,6 @@ ros2 launch robot_bringup my_robot_pin.launch.py
 - 各关节 kp/kd 增益定义在 `robot_description/urdf/robot_1.ros2_control.xacro`
 - **注意**：`ros2_controllers.yaml` 中 URDF 路径为绝对路径，工作空间移动后需同步修改
 
-## 致谢
+## 未来更新
+-本项目代码还有许多问题，之后会积极改进。
+-关于机械臂新的功能的更新，本人会更侧重于 moveit2 这个项目:https://github.com/aa483680845-dev/Arm_Moveit2.git 
