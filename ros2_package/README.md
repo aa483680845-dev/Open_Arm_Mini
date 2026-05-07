@@ -25,8 +25,7 @@ sudo apt install ros-jazzy-plotjuggler
 ## 编译与运行
 
 ```bash
-# 编译所有包（在工作空间根目录 ~/Project/ros2_Ragtime 下执行）
-cd ~/Project/ros2_Ragtime
+cd ~/Project/ros2_package
 colcon build --symlink-install
 source install/setup.bash
 ```
